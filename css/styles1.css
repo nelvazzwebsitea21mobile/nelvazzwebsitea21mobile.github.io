@@ -1,0 +1,43 @@
+body{
+	background-image: linear-gradient(125deg,#5E5E5E,#0B0B0B);
+	font-family: "Montserrat",sans-serif;
+	min-height: 0vh;
+}
+
+.container{
+	width: 97%;
+	position: absolute;
+	top: 50%;
+
+	transform: translateY(-50%);
+	text-align: center;
+	color: #E4E4E4;
+}
+
+.container h1{
+	font-size: 260px;
+	margin: 0;
+	font-weight: 0;
+	letter-spacing: 15px;
+}
+
+.container h2{
+	font-size: 40px;
+	margin: 0; 
+}
+
+.container a{
+	text-decoration: none;
+	background: black;
+	color: #fff;
+	padding: 32px 44px;
+	display: inline-block;
+	border-radius: 25px;
+	font-size: 20px;
+	text-transform: uppercase;
+	transition: 0.4s;
+}
+
+.container a:hover{
+	background: #272727;
+}

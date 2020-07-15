@@ -1,0 +1,121 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Lato';
+}
+
+body{
+    min-height: 100vh;
+}
+
+.fullpageMenu{
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #111;
+    transition: 0.5s;
+}
+
+.fullpageMenu.active{
+    top: 0;
+}
+
+.fullpageMenu .banner{
+	position: absolute;
+	min-width: 600px;
+	height: 100%;
+}
+
+.fullpageMenu .nav{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	overflow-y: auto;
+}
+
+.fullpageMenu .nav ul{
+	position: relative;
+}
+
+.fullpageMenu .nav ul li{
+	position: relative;
+	list-style: none;
+	padding: 0 20px;
+	margin: 5px 0;
+	overflow: hidden;
+	display: table;
+}
+
+.fullpageMenu .nav ul li:before{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #3b1899;
+	transition: transform 0.5s ease-in-out;
+	transform: scaleY(0);
+	transform-origin: bottom;
+}
+
+.fullpageMenu .nav ul li:hover:before{
+	transition: transform 0.5s ease-in-out;
+	transform: scaleY(1);
+	transform-origin: top;
+}
+
+.fullpageMenu .nav ul li a{
+	position: relative;
+	color: #fff;
+	text-decoration: none;
+	font-size: 4em;
+	font-weight: 700;
+	line-height: 1em;
+	padding-top: 12px;
+	display: inline-block;
+	text-transform: uppercase;
+	transition: 0.5s ease-in-out;
+}
+
+.fullpageMenu .nav ul li a:before{
+	content: attr(data-text);
+	position: absolute;
+	bottom: -100%;
+	left: 0;
+	color: #fff;
+}
+
+.fullpageMenu .nav ul li:hover a{
+	transform: translateY(-100%);
+	color: #fff;
+}
+
+.menuicon{
+	position: fixed;
+	top: 20px;
+	right: 20px;
+	width: 60px;
+	height: 60px;
+	background: #fff url(file:///F:/Disque%20Dur%20TOSHIBA/Site%20Globale/Site%20A-21%20-%20Mobile/img/menu.png);
+	background-size: 40px;
+	cursor: pointer;
+	background-repeat: no-repeat;
+	background-position: 10px;
+}
+
+.menuicon.active{
+	background: #fff url(file:///F:/Disque%20Dur%20TOSHIBA/Site%20Globale/Site%20A-21%20-%20Mobile/img/close.png);
+	background-size: 40px;
+	cursor: pointer;
+	background-repeat: no-repeat;
+	background-position: 10px;
+}
